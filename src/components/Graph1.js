@@ -18,7 +18,7 @@ function Graph1() {
           return x.toISOString().split('T')[0]
         })
         const bandwidth = Data.map(instance => instance.bandwidth)
-        const transmit = Data.map(instance => instance.bandwidth)
+        const transmit = Data.map(instance => instance.Transmit)
         const rec = Data.map(instance => instance.Receive)
         const trace1 = { type: 'scatter', mode: 'lines', name: 'Bandwidth', x: dates, y: bandwidth, line: { color: '#17BECF' } }
         const trace2 = { type: 'scatter', mode: 'lines', name: 'Receive', x: dates, y: rec, line: { color: '#7F7F7F' } }
